@@ -10,16 +10,17 @@ public class HomeWorkApp {
 //      checkSumSign();//вызов метода сравнения двух чисел
 //      printColour();//вызов метода вывода цвета
 //      compareNumbers();//вызов метода сравнения чисел
-      chooseAction();
+        chooseAction();
     }
 
     //метод вывода трех строк
     private static void printTHeeWords() {
-       System.out.println("Orange");
-       System.out.println("Banana");
-       System.out.println("Apple");
-       chooseAction();
+        System.out.println("Orange");
+        System.out.println("Banana");
+        System.out.println("Apple");
+        chooseAction();
     }
+
     //метод для двух int переменных с сравнением и выводом
     private static void checkSumSign() {
         int a = -20; //задаем переменную a
@@ -31,23 +32,30 @@ public class HomeWorkApp {
         }
         chooseAction();
     }
-   //метод вывода цвета в зависимости от заданного числа
-    private static void printColour() {
-    int value = 1000;
-    if (value <=0) {System.out.println("Красный");
-    } else if ((value >0) && (value <=100)) {
-        System.out.println("Жёлтый");
-            }  else {System.out.println("Зеленый");}
-    chooseAction();
-        }
 
-     //метод сравнения чисел
+    //метод вывода цвета в зависимости от заданного числа
+    private static void printColour() {
+        int value = 1000;
+        if (value <= 0) {
+            System.out.println("Красный");
+        } else if ((value > 0) && (value <= 100)) {
+            System.out.println("Жёлтый");
+        } else {
+            System.out.println("Зеленый");
+        }
+        chooseAction();
+    }
+
+    //метод сравнения чисел
     private static void compareNumbers() {
-    int a = 50;
-    int b = 10;
-    if (a>=b) {System.out.println(a+">="+b);}
-    else {System.out.println(a+"<"+b);}
-    chooseAction();
+        int a = 50;
+        int b = 10;
+        if (a >= b) {
+            System.out.println(a + ">=" + b);
+        } else {
+            System.out.println(a + "<" + b);
+        }
+        chooseAction();
     }
 
     //небольшое отступление от ДЗ сделано примитивно и громозко, но сделано
@@ -64,23 +72,29 @@ public class HomeWorkApp {
         Scanner in = new Scanner(System.in); //есл ивсё правильно понял то scanner это "тип" пользовательского вввода
         System.out.println("Выберите задачу");
         int num = in.nextInt();
-      //  System.out.println("Вы выбрали:" num);
-       // in.close();
+        //  System.out.println("Вы выбрали:" num);
+        // in.close();
         //поверям что ввел пользователь и заускаем выбранный метод
         // скорее всего есть более элегантный способ, но я пока его не знаю
         //и не нашел единого подхода на проверку является ли вводимое значение числом так что если ввести буквы то прога валится
-        if (num == 1) {printTHeeWords();}
-        else if (num == 2) {checkSumSign();}
-        else if (num == 3) {printColour();}
-        else if (num == 4) {compareNumbers();}
-        else if (num == 5) {System.out.println("Хорошего Вам дня, до свидания");}
-        else {
+        if (num == 1) {
+            printTHeeWords();
+        } else if (num == 2) {
+            checkSumSign();
+        } else if (num == 3) {
+            printColour();
+        } else if (num == 4) {
+            compareNumbers();
+        } else if (num == 5) {
+            System.out.println("Хорошего Вам дня, до свидания");
+        } else {
             System.out.println("Вы ввели неверное значение, пожалуста попробуйте снова");
-        chooseAction();}
+            chooseAction();
+        }
         in.close();
     }
 
-    }
+}
 
 
 
