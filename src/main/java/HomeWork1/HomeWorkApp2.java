@@ -8,40 +8,44 @@ public class HomeWorkApp2 {
     }
 
 
-
-
     //метод проверки принадлежит ли число диапазону (10,20]
     private static boolean compareNumbers(int a, int b) {
-        if (10<(a+b) && (a+b)<=20) return true; else return false;
+        if (10 < (a + b) && (a + b) <= 20) return true;
+        else return false;
     }
 
     // метод проверки чилса на + или / - возврат строка
     private static String positiveOrNegativeNumberString(int a) {
-        if (a<0) return "Число " + a + " отрицательное"; else return "Число " + a + " положительное";
+        if (a < 0) return "Число " + a + " отрицательное";
+        else return "Число " + a + " положительное";
     }
 
     //метод проверки является ли число отрицательным- возврат boolean
     private static boolean isNumberNegative(int a) {
-        if (a<0) return true; else return false;
+        if (a < 0) return true;
+        else return false;
     }
 
     //метод вывода строки n-раз
-    private static void repeatString(String str ,int n) {
-        for (int i=0;i<n;i++){
+    private static void repeatString(String str, int n) {
+        for (int i = 0; i < n; i++) {
             System.out.println(str);
         }
     }
 
     //метод проверки годана високосный
     private static boolean checkYear(int a) {
-        if (a<-45 && a!=0) {
+        if (a < -45 && a != 0) {
             System.out.print("Вы задали не корректный год но надо что то вернуть поэтому - ");
-            return false;}
-        else {
-            if ((a%4==0) && (a%100!=0) || (a%400==0)) {return true;} else return false;
+            return false;
+        } else {
+            if ((a % 4 == 0) && (a % 100 != 0) || (a % 400 == 0)) {
+                return true;
+            } else return false;
 
         }
     }
+
     private static void chooseAction() {
         //выводим меню
         System.out.println("Вы попали в меню выбора задачи, пожалуйста выберите из следующего списка:");
@@ -86,7 +90,10 @@ public class HomeWorkApp2 {
                     chooseAction();
                 } //закрыли default скобок много поэтому буду отмечать
             }//закрыли switch
-        } else {System.out.println("Вы ввели не число, пожалуста попробуйте снова"); chooseAction();}//это есл ипользователь ввел не число
+        } else {
+            System.out.println("Вы ввели не число, пожалуста попробуйте снова");
+            chooseAction();
+        }//это есл ипользователь ввел не число
         in.close();
     }//закрыли метод
 
