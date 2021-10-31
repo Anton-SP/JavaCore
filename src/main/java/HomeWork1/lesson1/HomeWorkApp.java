@@ -1,4 +1,4 @@
-package HomeWork1;
+package HomeWork1.lesson1;
 
 import com.sun.source.tree.ArrayAccessTree;
 
