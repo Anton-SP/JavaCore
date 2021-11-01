@@ -1,4 +1,4 @@
-package HomeWork1;
+package HomeWork1.lesson4;
 
 import javax.sound.midi.Soundbank;
 import java.util.Random;
