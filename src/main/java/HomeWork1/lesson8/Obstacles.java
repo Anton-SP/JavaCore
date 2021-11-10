@@ -1,7 +1,8 @@
 package HomeWork1.lesson8;
 
 public interface Obstacles {
+void info();
 
-boolean overcomeAnObstacle(Participants participant);
+void overcomeAnObstacle(Participants participant);
 
 }

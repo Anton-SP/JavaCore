@@ -11,9 +11,20 @@ public class Treadmill implements Obstacles {
         return distance;
     }
 
-    @Override
-    public boolean overcomeAnObstacle(Participants participant) {
 
-        return false;
+    @Override
+    public void overcomeAnObstacle(Participants participant) {
+        if (this.getDistance()<=participant.getRun()){
+            participant.run();
+        } else {
+            participant.fall();
+
+
+        }
+    }
+
+    @Override
+    public void info() {
+        System.out.printf("Obstacle - Treadmill distance - %d%n%n",this.getDistance());
     }
 }

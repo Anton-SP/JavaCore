@@ -4,8 +4,16 @@ public class Wall implements Obstacles {
     int height;
 
     @Override
-    public boolean overcomeAnObstacle(Participants participant) {
-        return false;
+    public void overcomeAnObstacle(Participants participant) {
+        if (this.getHeight()<=participant.getJump()){
+            participant.jump();
+        } else {
+            participant.fall();
+
+
+        }
+
+
     }
 
     public Wall(int height) {
@@ -14,6 +22,11 @@ public class Wall implements Obstacles {
 
     public int getHeight() {
         return height;
+    }
+
+    @Override
+    public void info() {
+        System.out.printf("Obstacle - Wall height - %d%n%n",this.getHeight());
     }
 }
 
