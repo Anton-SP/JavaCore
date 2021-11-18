@@ -57,7 +57,7 @@ public class Box<E extends Fruit> {
             //  System.out.printf("Boxes are equal by weight! and it is - %f%n",this.getWeight());
 
             return true;
-        } else {// System.out.printf("Boxes are NOT equal by weight! First box's weight is %f, second box's weight is %f%n",this.getWeight(),anotherBox.getWeight());
+        } else {//  System.out.printf("Boxes are NOT equal by weight! First box's weight is %f, second box's weight is %f%n",this.getWeight(),anotherBox.getWeight());
             return false;}
     }
 
