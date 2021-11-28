@@ -63,8 +63,27 @@ public class Box<E extends Fruit> {
 
     //task 6 from homework
     //пересыпать в коробку = pour into a box...so
-    public void pourBox (Box newBox){
-        //first check that these are the same fruits
+
+
+    public void pourBox (Box <E> newBox){
+        if (this.currentSize < (newBox.getContent().length - newBox.getCurrentSize())) {
+            for (E curbox:this.getContent()
+            ) {
+                if (curbox!=null) {
+                    newBox.getContent()[newBox.getCurrentSize()] = curbox;
+                    newBox.setCurrentSize(newBox.getCurrentSize()+1);
+                }
+            }
+            this.boxClear();
+        }
+        else {
+            System.out.println("There not enough space in the new box");
+        }
+        System.out.println("Success");
+
+
+
+       /* //first check that these are the same fruits
 
         if (this.getContent().getClass().equals(newBox.getContent().getClass()))
         {
@@ -84,7 +103,7 @@ public class Box<E extends Fruit> {
             }
             System.out.println("Success");
         } else {System.out.println("There are different fruits in boxes, you cannot mix them.");}
-
+*/
     }
 
     public void boxClear(){
