@@ -8,7 +8,7 @@ public class HomeWorkApp3 {
 
     public static int[] arrBalance = new int[]
 
-            {5, 10, 6, 4, 2, 3,};//массив где есть баланс даи по коду пототм тетсировать удобнее есл иесть заготовки
+            {5, 10, 6, 4, 2, 3,};//массив где есть баланс да и по коду потом тетсировать удобнее есл иесть заготовки
 
     public static int[] arrDisBalance = new int[]
 
